@@ -3,7 +3,7 @@ SafeCity
 ├── backend
 │   ├── controllers
 │   │   ├── incidentController.js
-│   │   ├── userController.js
+│   │   ├── authController.js
 │   │
 │   ├── models
 │   │   ├── Incident.js
@@ -11,7 +11,7 @@ SafeCity
 │   │
 │   ├── routes
 │   │   ├── incidentRoutes.js
-│   │   ├── userRoutes.js
+│   │   ├── authRoutes.js
 │   │
 │   ├── middleware
 │   │   ├── authMiddleware.js
