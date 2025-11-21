@@ -1,4 +1,4 @@
-const User = require("../models/User");
+const User = require("../models/user");
 const Incident = require("../models/Incident");
 // Report a new incident by user
 exports.reportIncident = async (req, res) => {
