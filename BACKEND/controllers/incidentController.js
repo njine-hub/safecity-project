@@ -1,9 +1,9 @@
-const Incident = require("../models/Incident");
+const incident = require("../models/incident");
 
 // Create incident
 exports.createIncident = async (req, res) => {
   try {
-    const incident = await Incident.create({
+    const incident = await incident.create({
       ...req.body,
       user: req.user.id
     });

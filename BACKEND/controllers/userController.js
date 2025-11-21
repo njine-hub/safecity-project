@@ -1,9 +1,9 @@
 const User = require("../models/user");
-const Incident = require("../models/Incident");
+const incident = require("../models/incident");
 // Report a new incident by user
 exports.reportIncident = async (req, res) => {
     try {
-        const incident = await Incident.create({
+        const incident = await incident.create({
             ...req.body,
             user: req.user.id
         });
@@ -16,7 +16,7 @@ exports.reportIncident = async (req, res) => {
 // Get all incidents reported by the logged-in user
 exports.getUserIncidents = async (req, res) => {
     try {
-        const incidents = await Incident.find({ user: req.user.id });
+        const incidents = await incident.find({ user: req.user.id });
         res.json(incidents);
     } catch (err) {
         res.status(500).json({ error: err.message });
