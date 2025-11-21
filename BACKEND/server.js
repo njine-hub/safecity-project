@@ -13,6 +13,7 @@ app.use(express.json());
 
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/apiincidents", require("./routes/incidentRoutes"));
+app.use("/api/user", require("./routes/userRoutes"));
 
 app.get("/", (req, res) => {
     res.send("SafeCity API is running");
